@@ -1,0 +1,37 @@
+{
+  "name": "auth0-webapp",
+  "version": "1.0.0",
+  "description": "An example web-app hat uses Auth0 Open ID Connect capabilites to authenticate users and get their permission to consume an API.",
+  "license": "MIT",
+  "author": "dlozlla",
+  "bugs": {
+    "url": "https://github.com/dlozlla/auth0-webapp/issues"
+  },
+  "homepage": "https://github.com/dlozlla/auth0-webapp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dlozlla/auth0-webapp.git"
+  },
+  "scripts": {
+    "init": "concurrently \"npm:init:dependencies\"",
+    "init:dependencies": "concurrently \"npm:api:dependencies\" \"npm:web-app:dependencies\"",
+    "api:start": "npm start --prefix ./src/api",
+    "api:dependencies": "npm install --prefix ./src/api",
+    "web-app:start": "npm start --prefix ./src/web-app",
+    "web-app:dependencies": "npm install --prefix ./src/web-app"
+  },
+  "keywords": [
+    "auth0",
+    "oauth2",
+    "authorization",
+    "samples",
+    "tools",
+    "labs"
+  ],
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "eslint": "^8.0.1",
+    "prettier": "^2.4.1",
+    "dotenv": "10.0.0"
+  }
+}

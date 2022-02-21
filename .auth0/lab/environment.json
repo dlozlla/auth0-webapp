@@ -1,0 +1,30 @@
+{
+  "name": "Lozano test area",
+  "version": "1.0",
+  "resources": "resources.yml",
+  "clients": [
+    {
+      "name": "lozano-test-app",
+      "directory": "src/web-app",
+      "env": {
+        "API_URL": "http://localhost:35500",
+        "ISSUER_BASE_URL": "$tenant_base_url",
+        "CLIENT_ID": "$client_id",
+        "CLIENT_SECRET": "$client_secret",
+        "SESSION_SECRET": "a long, randomly-generated string stored in env",
+        "PORT": 37500
+      }
+    }
+  ],
+  "resourceServers": [
+    {
+      "name": "lozano-API",
+      "directory": "src/api",
+      "env": {
+        "ISSUER_BASE_URL": "$tenant_base_url",
+        "AUDIENCE": "$identifier",
+        "PORT": 35500
+      }
+    }
+  ]
+}

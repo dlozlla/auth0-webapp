@@ -1,0 +1,8 @@
+clients: # Add other client settings https://auth0.com/docs/api/management/v2#!/Clients/post_clients
+  -
+    name: "lozano-test-app"
+    app_type: "regular_web"
+    callbacks:
+      - "http://localhost:37500/callback"
+    allowed_logout_urls:
+      - "http://localhost:37500/logout"
