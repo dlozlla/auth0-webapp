@@ -87,7 +87,7 @@ app.get("/expenses", requiresAuth(), async (req, res, next) => {
     try {
       if (responseTypesWithToken.includes(RESPONSE_TYPE)) {
         let { token_type, access_token } = req.oidc.accessToken;
-        logger.log(`Send request to API with token type: ${token_type}`);
+        logger.info(`Send request to API with token type: ${token_type}`);
         let expenses = await axios.get(`${API_URL}/reports`, {
           headers: {
             Authorization: `${token_type} ${access_token}`,

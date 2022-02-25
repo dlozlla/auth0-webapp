@@ -4,6 +4,7 @@ const {
   AUDIENCE,
   API_PORT,
   API_URL,
+  REQUIRED_SCOPES,
 } = process.env;
 
 function checkUrl() {
@@ -27,7 +28,7 @@ console.log("Environment Settings:");
 console.log(`ISSUER_BASE_URL: ${ISSUER_BASE_URL}`);
 console.log(`AUDIENCE: ${AUDIENCE}`);
 console.log(`API_URL: ${API_URL}`);
-
+console.log(`API_URL: ${REQUIRED_SCOPES}`);
 console.log("----------------------------------\n");
 
 module.exports = {
@@ -36,4 +37,5 @@ module.exports = {
   AUDIENCE: AUDIENCE,
   API_PORT: API_PORT,
   API_URL: removeTrailingSlashFromUrl(API_URL),
+  REQUIRED_SCOPES: REQUIRED_SCOPES,
 };
