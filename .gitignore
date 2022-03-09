@@ -105,3 +105,6 @@ dist
 
 # Let everyone use vscode as they want
 .vscode/
+
+# IDEA IDE
+.idea
